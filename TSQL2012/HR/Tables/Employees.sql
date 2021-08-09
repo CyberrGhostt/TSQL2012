@@ -13,6 +13,7 @@
     [country]         NVARCHAR (15) NOT NULL,
     [phone]           NVARCHAR (24) NOT NULL,
     [mgrid]           INT           NULL,
+    [sth] INT NULL, 
     CONSTRAINT [PK_Employees] PRIMARY KEY CLUSTERED ([empid] ASC),
     CONSTRAINT [CHK_birthdate] CHECK ([birthdate]<=getdate()),
     CONSTRAINT [FK_Employees_Employees] FOREIGN KEY ([mgrid]) REFERENCES [HR].[Employees] ([empid])
